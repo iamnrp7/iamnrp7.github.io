@@ -2,14 +2,15 @@
   "name": "react-portfolio-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yujisatojr.github.io/react-portfolio-template",
+  "homepage": "https://iamnrp7.github.io",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/fontawesome-svg-core": "^7.2.0",
+    "@fortawesome/free-brands-svg-icons": "^7.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
-    "@fortawesome/free-solid-svg-icons": "^6.5.2",
-    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^3.2.0",
     "@mui/icons-material": "^5.15.19",
     "@mui/material": "^5.15.19",
     "@testing-library/jest-dom": "^5.17.0",
@@ -54,6 +55,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-vertical-timeline-component": "^3.3.6"
+    "@types/react-vertical-timeline-component": "^3.3.6",
+    "gh-pages": "^6.3.0"
   }
 }

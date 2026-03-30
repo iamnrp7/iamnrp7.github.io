@@ -1,91 +1,112 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faMicrochip, faSatelliteDish, faCode } from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
 const labelsFirst = [
-    "React",
-    "TypeScript",
-    "JavaScript",
-    "HTML5",
-    "CSS3",
-    "SASS",
-    "Flask",
-    "Python",
-    "SQL",
-    "PostgreSQL",
-    "Postman"
+  "MATLAB",
+  "Python",
+  "C",
+  "C++",
+  "Arduino",
+  "R"
 ];
 
 const labelsSecond = [
-    "Git",
-    "GitHub Actions",
-    "Docker",
-    "AWS",
-    "Azure",
-    "Linux",
-    "Snowflake",
-    "Pandas",
-    "Selenium",
+  "Silvaco TCAD",
+  "MATLAB Simulink",
+  "GNU Radio",
+  "Synopsys Design Compiler",
+  "ICC2",
+  "PrimeTime"
 ];
 
 const labelsThird = [
-    "OpenAI",
-    "Groq",
-    "LangChain",
-    "Qdrant",
-    "Hugging Face",
-    "LlamaIndex",
-    "Streamlit",
+  "ESP32",
+  "ESP8266",
+  "ATmega2560",
+  "Raspberry Pi",
+  "LoRa",
+  "SDR"
 ];
 
 function Expertise() {
-    return (
+
+  return (
     <div className="container" id="expertise">
-        <div className="skills-container">
-            <h1>Expertise</h1>
-            <div className="skills-grid">
-                <div className="skill">
-                    <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Full Stack Web Development</h3>
-                    <p>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsFirst.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
+      <div className="skills-container">
 
-                <div className="skill">
-                    <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>DevOps & Automation</h3>
-                    <p>Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsSecond.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
+        <h1>Expertise</h1>
 
-                <div className="skill">
-                    <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsThird.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
+        <div className="skills-grid">
+
+          <div className="skill">
+            <FontAwesomeIcon icon={faSatelliteDish} size="3x"/>
+            <h3>Wireless Communication Systems</h3>
+
+            <p>
+              Research and simulation of THz and Free Space Optical (FSO)
+              wireless systems including channel modeling and performance
+              evaluation using BER, SNR and ergodic capacity metrics.
+            </p>
+
+            <div className="flex-chips">
+              <span className="chip-title">Tools:</span>
+              {labelsFirst.map((label, index) => (
+                <Chip key={index} className='chip' label={label}/>
+              ))}
             </div>
+
+          </div>
+
+          <div className="skill">
+
+            <FontAwesomeIcon icon={faMicrochip} size="3x"/>
+
+            <h3>Semiconductor Device Simulation</h3>
+
+            <p>
+              Design and simulation of advanced semiconductor devices
+              including Tunnel FET biosensors using Silvaco ATLAS with
+              non-local BTBT modeling and high-k gate stack engineering.
+            </p>
+
+            <div className="flex-chips">
+              <span className="chip-title">Tools:</span>
+              {labelsSecond.map((label, index) => (
+                <Chip key={index} className='chip' label={label}/>
+              ))}
+            </div>
+
+          </div>
+
+          <div className="skill">
+
+            <FontAwesomeIcon icon={faCode} size="3x"/>
+
+            <h3>Embedded Systems & DSP</h3>
+
+            <p>
+              Development of embedded systems using microcontrollers
+              and RF modules for communication, signal processing,
+              AI integration and real-time computation.
+            </p>
+
+            <div className="flex-chips">
+              <span className="chip-title">Hardware:</span>
+              {labelsThird.map((label, index) => (
+                <Chip key={index} className='chip' label={label}/>
+              ))}
+            </div>
+
+          </div>
+
         </div>
+      </div>
     </div>
-    );
+  );
 }
 
 export default Expertise;
